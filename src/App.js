@@ -13,9 +13,7 @@ function App() {
 
   // Update the todoItem state
   const addTodos = () => {
-    setTodoItem((oldTodos) => {
-      return [...oldTodos, todoList];
-    });
+    setTodoItem(oldTodos => [...oldTodos, todoList]);
     setTodoList("");
   };
 
@@ -23,9 +21,7 @@ function App() {
   const onClickOnDeleteItem = (id) => {
     let hasDelete = window.confirm("Are you sure want to delete this item?");
     if (hasDelete) {
-      setTodoItem((oldTodos) => {
-        return oldTodos.filter((item, index) => index !== id);
-      });
+      setTodoItem(oldTodos => oldTodos.filter((item, index) => index !== id));
     }
   };
 
